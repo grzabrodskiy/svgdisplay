@@ -1,11 +1,11 @@
 
 import React from 'react';
-import { StatusBar } from 'expo-status-bar';
 import { Platform, StyleSheet, Text, View } from 'react-native';
-import Svg, {SvgUri, Image as SvgImage} from 'react-native-svg';
+import Svg, {Image as SvgImage} from 'react-native-svg';
 
-import SvgImgIos from './assets/tiger.svg'
+import SvgImgTiger from './assets/tiger.svg'
 
+// alternative of accessing svg on web and mobile
 export function SvgWrap(Obj, props) {
   let SvgImg
 
@@ -25,9 +25,9 @@ export function SvgWrap(Obj, props) {
 
 
 
-export default  function asyncApp() {
+export default  function App() {
 
-  let SvgImg = SvgWrap(SvgImgIos, undefined)
+  //let SvgImg = SvgWrap(SvgImgIos, undefined)
 
   
 
@@ -35,11 +35,10 @@ export default  function asyncApp() {
     <View style={styles.container}>
        <View >
           <Svg width='100px' height='100px' viewBox='0 0 900 900'>
-              <SvgImgIos />
+              <SvgImgTiger />
           </Svg>
         </View>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <Text>You should see SVG above</Text>
     </View>
   );
 }
